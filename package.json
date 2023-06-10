@@ -12,8 +12,11 @@
     "@mdi/font": "7.0.96",
     "core-js": "^3.29.0",
     "roboto-fontface": "*",
+    "tsparticles": "^2.10.1",
+    "tsparticles-engine": "^2.10.1",
     "vue": "^3.2.0",
     "vue-router": "^4.0.0",
+    "vue3-particles": "^2.10.1",
     "vuetify": "^3.0.0",
     "webfontloader": "^1.0.0"
   },

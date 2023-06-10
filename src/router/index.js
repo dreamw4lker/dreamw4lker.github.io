@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/default/Default.vue'),
+    component: () => import('@/layouts/MainLayout.vue'),
     children: [
       {
         path: '',
@@ -16,6 +16,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/about',
+    component: () => import('@/layouts/MainAppBarLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'About',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/About.vue'),
+      }
+    ]
+  }
 ]
 
 const router = createRouter({
