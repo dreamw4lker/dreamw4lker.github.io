@@ -1,10 +1,15 @@
 <template>
-  <v-app-bar flat color="primary">
+  <v-app-bar flat color="primary" class="x-app-bar">
+    <v-app-bar-nav-icon
+      icon="mdi-home"
+      href="/"
+    />
     <v-app-bar-title class="text-right">
       <template v-for="link in links">
         <v-btn
-          variant="text"
+          variant="outlined"
           :href="link.href"
+          class="mr-2"
         >
           {{ link.title }}
         </v-btn>
@@ -15,9 +20,16 @@
 
 <script setup>
 const links = [
-  {title: 'Home', href: '/'},
   {title: 'About', href: '/about'},
   {title: 'Projects'},
   {title: 'Contacts'}
 ]
 </script>
+
+<style scoped>
+.x-app-bar {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+}
+</style>

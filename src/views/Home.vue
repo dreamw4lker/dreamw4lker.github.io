@@ -7,8 +7,9 @@
       :options="setupScript"
     />
     <div class="d-flex flex-column position-relative fill-height align-center justify-center" style="z-index: 2">
-      <p style="color: #FFF; font-size: 72px; font-weight: 600">Alexander Shkirkov</p>
-      <p style="color: #FFF; font-size: 72px; font-weight: 200">Fullstack developer</p>
+      <v-avatar image="../assets/img/photo_h.png" size="120" class="x-avatar"/>
+      <p style="color: #FFF; font-size: 60px; font-weight: 600; line-height: 1.1" class="mt-8">Alexander Shkirkov</p>
+      <p style="color: #FFF; font-size: 60px; font-weight: 200; line-height: 1.1" class="mt-8">Fullstack developer</p>
       <div class="d-flex pt-10">
         <template v-for="link in links">
           <v-btn
@@ -619,3 +620,10 @@ const social = [
   {icon: 'custom:leetcode', href: 'https://leetcode.com/dreamwalker7', tooltip: 'LeetCode profile'},
 ]
 </script>
+
+<style>
+.x-avatar .v-img__img {
+  transform: scale(2.5);
+  margin-top: 60px;
+}
+</style>
