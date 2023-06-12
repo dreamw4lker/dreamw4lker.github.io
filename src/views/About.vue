@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column mx-auto" style="max-width: 1200px">
-    <p class="text-white text-h3 text-center mt-4">Skills</p>
+    <p class="text-white text-h3 text-center mt-4">Skills and experience</p>
     <v-row class="pt-4">
       <template v-for="skill in skills">
         <v-col sm="12" md="4">
@@ -54,7 +54,7 @@
     </v-row>
 
     <v-divider color="white" class="mt-8 mb-4"/>
-    <p class="text-white text-h3 text-center mt-4">In progress</p>
+    <p class="text-white text-h3 text-center mt-4">In progress of studying</p>
     <v-row class="pt-4 justify-center">
       <v-col sm="12" md="4">
         <v-card
@@ -82,25 +82,25 @@
 <script setup>
 const skills = [
   {
-    type: 'Frontend: langs, frameworks, libs',
+    type: 'Frontend: JS environment',
     background: '/src/assets/img/frontend.png',
     techs: [
       {name: 'JavaScript', rating: 5, info: 'Around 5 years of experience. The main language used in frontend tasks'},
-      {name: 'Vue 2', rating: 5, info: 'TODO'},
-      {name: 'Vuetify', rating: 5, info: 'TODO'},
-      {name: 'jQuery', rating: 3.5, info: 'TODO'},
-      {name: 'Apache Wicket', rating: 3, info: 'TODO'},
-      {name: 'Thymeleaf', rating: 2, info: 'TODO'},
+      {name: 'Vue 2', rating: 5, info: '~3.5 years of experience. The main framework for modern projects, generally used with Vuetify UI components. Unfortunately, I have no experience with Vue 3 yet'},
+      {name: 'Vuetify', rating: 5, info: '~3.5 years of experience. Used as main UI library in most of the modern projects. Successfully migrated from Vuetify 1.X to Vuetify 2.X. One of the top answerers in `vuetify.js` tag at StackOverflow'},
+      {name: 'jQuery', rating: 3.5, info: '~2 years of experience. Used in pre-Vue projects in combination with Wicket or Thymeleaf frameworks'},
     ]
   },
   {
-    type: 'Backend',
+    type: 'Backend: Java environment',
     background: '/src/assets/img/backend.png',
     techs: [
       {name: 'Java 8/11', rating: 5, info: 'Around 6 years of experience. The main language used in backend tasks. Also have some experience in Java 6, 7 and 17'},
-      {name: 'Spring', rating: 4.5, info: 'TODO'},
-      {name: 'Hibernate', rating: 4, info: 'TODO'},
-      {name: 'jOOQ', rating: 4, info: 'TODO'},
+      {name: 'Spring', rating: 4.5, info: '~6 years of experience. Application framework for the most projects'},
+      {name: 'Hibernate', rating: 4, info: '~6 years of experience. The main ORM for the most projects'},
+      {name: 'jOOQ', rating: 3, info: '~2 years of production experience. Used in one project as an alternative of Hibernate'},
+      {name: 'Apache Wicket', rating: 3, info: '~4 years of periodically experience in legacy, but still supported projects. Superseded by Vue environment in modern projects'},
+      {name: 'Thymeleaf', rating: 2, info: '~2 years of experience. Used in some pre-Vue projects as an alternative of Wicket'},
     ]
   },
   {
@@ -108,11 +108,11 @@ const skills = [
     background: '/src/assets/img/databases.png',
     backgroundClass: 'object-position-top',
     techs: [
-      {name: 'PostgreSQL', rating: 5, info: 'TODO'},
-      {name: 'Oracle', rating: 4, info: 'TODO'},
+      {name: 'PostgreSQL', rating: 5, info: 'More than 5 years of production experience. The main DBMS used in projects. Writing basic queries, working with views, functions, etc'},
+      {name: 'Oracle', rating: 4, info: '~3 years of experience, mainly during the process of Oracle -> Postgres migration in some projects'},
       {name: 'Apache Derby', rating: 4, info: '~3 years of experience. Used in internal and low-load projects'},
       {name: 'H2', rating: 3, info: '~1.5 years of production experience. Used in the only one project, superseded by Apache Derby because of insufficient performance'},
-      {name: 'MongoDB', rating: 2, info: 'TODO'},
+      {name: 'MongoDB', rating: 2, info: 'Basically writing small queries to grab data from external systems'},
     ]
   },
   {
@@ -120,8 +120,8 @@ const skills = [
     background: '/src/assets/img/vcs.png',
     backgroundClass: 'object-position-top',
     techs: [
-      {name: 'Git', rating: 5, info: 'More than 4 years of production experience'},
-      {name: 'Mercurial', rating: 5, info: 'More than 5 years of production experience'},
+      {name: 'Git', rating: 5, info: 'More than 4 years of production experience in modern projects'},
+      {name: 'Mercurial', rating: 5, info: 'More than 5 years of production experience in legacy projects'},
     ]
   },
   {
@@ -129,8 +129,8 @@ const skills = [
     background: '/src/assets/img/ci.png',
     backgroundClass: 'object-position-top',
     techs: [
-      {name: 'Jenkins', rating: 4, info: 'TODO'},
-      {name: 'GitLab', rating: 3, info: 'TODO'},
+      {name: 'Jenkins', rating: 4, info: '~6 years of experience, mainly with small configuration changes of CI tasks'},
+      {name: 'GitLab', rating: 3, info: 'Some experience in third-party organization'},
     ]
   },
   {
@@ -138,11 +138,11 @@ const skills = [
     background: '/src/assets/img/etc_skills.png',
     backgroundClass: 'object-position-bottom',
     techs: [
-      {name: 'Apache Cordova', rating: 4, info: 'TODO'},
-      {name: 'Modbus RTU/TCP', rating: 4, info: 'TODO'},
-      {name: 'Printer languages: TSPL, EPL, ZPL', rating: 4, info: 'TODO'},
-      {name: 'JavaFX', rating: 3, info: 'TODO'},
-      {name: 'Swing', rating: 2, info: 'TODO'},
+      {name: 'Apache Cordova', rating: 4, info: '~3 years of experience in Android and iOS mobile development, starting from cordova-android 8.1.0. Used for packing Vue projects into mobile apps. Two successfully published projects in PlayMarket and AppStore'},
+      {name: 'Modbus RTU/TCP', rating: 4, info: '~3 years of periodically experience, used for communication with some remote controllers (i.e. diesel-generator controllers, electricity meters, discrete I/O controllers, etc)'},
+      {name: 'Printer languages: TSPL, EPL, ZPL', rating: 4, info: '~3 years of periodically experience to communicate with barcode label printers (TSC, Eltron, Zebra and compatible printers). Making barcode label templates to use with some medical and laboratory systems'},
+      {name: 'JavaFX', rating: 3, info: '~2 years of experience in the only one project written on Java 8'},
+      {name: 'Swing', rating: 2, info: 'Some experience in supporting legacy system written on Java 6/7 with Swing GUI'},
     ]
   },
 ]
