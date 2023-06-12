@@ -17,15 +17,30 @@ const routes = [
     ],
   },
   {
-    path: '/about',
+    path: '/experience',
     component: () => import('@/layouts/MainAppBarLayout.vue'),
     children: [
       {
         path: '',
-        name: 'About',
-        component: () => import(/* webpackChunkName: "home" */ '@/views/About.vue'),
+        name: 'Experience',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Experience.vue'),
       }
     ]
+  },
+  {
+    path: '/bio',
+    component: () => import('@/layouts/MainAppBarLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Bio',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Bio.vue'),
+      }
+    ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   }
 ]
 

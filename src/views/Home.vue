@@ -607,9 +607,9 @@ const setupScript = {
 }
 
 const links = [
-  {title: 'About', href: '/about'},
-  {title: 'Projects'},
-  {title: 'Contacts'}
+  {title: 'Experience', href: '/experience'},
+  {title: 'Bio', href: '/bio'},
+  {title: 'CV'}
 ]
 
 const social = [

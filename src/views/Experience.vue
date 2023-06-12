@@ -99,6 +99,7 @@ const skills = [
       {name: 'Spring', rating: 4.5, info: '~6 years of experience. Application framework for the most projects'},
       {name: 'Hibernate', rating: 4, info: '~6 years of experience. The main ORM for the most projects'},
       {name: 'jOOQ', rating: 3, info: '~2 years of production experience. Used in one project as an alternative of Hibernate'},
+      {name: 'JasperReports', rating: 4, info: '~5 years of production experience. Used in every project that needs template generation (reports, printing forms, ...)'},
       {name: 'Apache Wicket', rating: 3, info: '~4 years of periodically experience in legacy, but still supported projects. Superseded by Vue environment in modern projects'},
       {name: 'Thymeleaf', rating: 2, info: '~2 years of experience. Used in some pre-Vue projects as an alternative of Wicket'},
     ]
