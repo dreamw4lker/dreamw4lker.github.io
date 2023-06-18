@@ -21,7 +21,7 @@
 <script setup>
 const links = [
   {title: 'Experience', href: '/experience'},
-  {title: 'Bio', href: '/bio'},
+  {title: 'Projects', href: '/projects'},
   {title: 'CV'}
 ]
 </script>

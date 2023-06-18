@@ -39,6 +39,17 @@ const routes = [
     ]
   },
   {
+    path: '/projects',
+    component: () => import('@/layouts/MainAppBarLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Bio',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Projects.vue'),
+      }
+    ]
+  },
+  {
     path: '/:pathMatch(.*)*',
     redirect: '/'
   }

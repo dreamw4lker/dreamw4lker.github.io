@@ -53,7 +53,7 @@
       </template>
     </v-row>
 
-    <v-divider color="white" class="mt-8 mb-4"/>
+    <!--<v-divider color="white" class="mt-8 mb-4"/>
     <p class="text-white text-h3 text-center mt-4">In progress of studying</p>
     <v-row class="pt-4 justify-center">
       <v-col sm="12" md="4">
@@ -75,7 +75,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-    </v-row>
+    </v-row>-->
   </div>
 </template>
 
@@ -168,7 +168,7 @@ const inProgress = {
 }
 
 .bg-primary-transparent {
-  background-color: rgba(48, 43, 99, 0.5) !important;
+  background-color: rgba(48, 43, 99, 0.7) !important;
 }
 
 .x-card {

@@ -73,6 +73,6 @@ export default {
 }
 
 .bg-primary-transparent {
-  background-color: rgba(48, 43, 99, 0.5) !important;
+  background-color: rgba(48, 43, 99, 0.7) !important;
 }
 </style>
