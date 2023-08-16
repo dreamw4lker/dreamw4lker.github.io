@@ -83,7 +83,7 @@
 const skills = [
   {
     type: 'Frontend: JS environment',
-    background: '/src/assets/img/frontend.png',
+    background: '/assets/img/frontend.png',
     techs: [
       {name: 'JavaScript', rating: 5, info: 'Around 5 years of experience. The main language used in frontend tasks'},
       {name: 'Vue 2', rating: 5, info: '~3.5 years of experience. The main framework for modern projects, generally used with Vuetify UI components. Unfortunately, I have no experience with Vue 3 yet'},
@@ -93,7 +93,7 @@ const skills = [
   },
   {
     type: 'Backend: Java environment',
-    background: '/src/assets/img/backend.png',
+    background: '/assets/img/backend.png',
     techs: [
       {name: 'Java 8/11', rating: 5, info: 'Around 6 years of experience. The main language used in backend tasks. Also have some experience in Java 6, 7 and 17'},
       {name: 'Spring', rating: 4.5, info: '~6 years of experience. Application framework for the most projects'},
@@ -106,7 +106,7 @@ const skills = [
   },
   {
     type: 'Databases',
-    background: '/src/assets/img/databases.png',
+    background: '/assets/img/databases.png',
     backgroundClass: 'object-position-top',
     techs: [
       {name: 'PostgreSQL', rating: 5, info: 'More than 5 years of production experience. The main DBMS used in projects. Writing basic queries, working with views, functions, etc'},
@@ -118,7 +118,7 @@ const skills = [
   },
   {
     type: 'VCS',
-    background: '/src/assets/img/vcs.png',
+    background: '/assets/img/vcs.png',
     backgroundClass: 'object-position-top',
     techs: [
       {name: 'Git', rating: 5, info: 'More than 4 years of production experience in modern projects'},
@@ -127,7 +127,7 @@ const skills = [
   },
   {
     type: 'CI',
-    background: '/src/assets/img/ci.png',
+    background: '/assets/img/ci.png',
     backgroundClass: 'object-position-top',
     techs: [
       {name: 'Jenkins', rating: 4, info: '~6 years of experience, mainly with small configuration changes of CI tasks'},
@@ -136,7 +136,7 @@ const skills = [
   },
   {
     type: '...etc',
-    background: '/src/assets/img/etc_skills.png',
+    background: '/assets/img/etc_skills.png',
     backgroundClass: 'object-position-bottom',
     techs: [
       {name: 'Apache Cordova', rating: 4, info: '~3 years of experience in Android and iOS mobile development, starting from cordova-android 8.1.0. Used for packing Vue projects into mobile apps. Two successfully published projects in PlayMarket and AppStore'},
@@ -149,7 +149,7 @@ const skills = [
 ]
 
 const inProgress = {
-  background: '/src/assets/img/in_progress.png',
+  background: '/assets/img/in_progress.png',
   techs: [
     {name: 'Vue3 + Vuetify3'},
     {name: 'Java 17'},
