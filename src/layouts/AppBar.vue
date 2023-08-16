@@ -20,9 +20,8 @@
 
 <script setup>
 const links = [
-  {title: 'Experience', href: '/experience'},
+  {title: 'Skills', href: '/skills'},
   {title: 'Projects', href: '/projects'},
-  {title: 'CV'}
 ]
 </script>
 

@@ -17,13 +17,13 @@ const routes = [
     ],
   },
   {
-    path: '/experience',
+    path: '/skills',
     component: () => import('@/layouts/MainAppBarLayout.vue'),
     children: [
       {
         path: '',
-        name: 'Experience',
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Experience.vue'),
+        name: 'Skills',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Skills.vue'),
       }
     ]
   },

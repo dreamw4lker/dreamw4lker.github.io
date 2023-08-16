@@ -9,7 +9,7 @@
     <div class="d-flex flex-column position-relative fill-height align-center justify-center" style="z-index: 2">
       <v-avatar image="../assets/img/photo_h.png" size="120" class="x-avatar"/>
       <p style="color: #FFF; font-size: 48px; font-weight: 600; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Alexander Shkirkov</p>
-      <p style="color: #FFF; font-size: 48px; font-weight: 200; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Fullstack developer</p>
+      <p style="color: #FFF; font-size: 36px; font-weight: 200; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Fullstack Java / Vue.js developer</p>
       <div class="d-flex pt-10">
         <template v-for="link in links">
           <v-btn
@@ -21,6 +21,32 @@
             {{ link.title }}
           </v-btn>
         </template>
+
+        <v-menu>
+          <template #activator="{ props }">
+            <v-btn
+              v-bind="props"
+              variant="outlined"
+              color="white"
+              class="ml-2"
+            >
+              <span>CV</span>
+              <v-icon class="ml-1">mdi-chevron-down</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item
+              v-for="item in cvVariants"
+              :key="item.lang"
+              :value="item.lang"
+              :href="`/cv/ShkirkovAU_CV_${item.lang}.pdf`"
+              target="_blank"
+            >
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </div>
       <div class="d-flex pt-10">
         <template v-for="sb in social">
@@ -607,9 +633,13 @@ const setupScript = {
 }
 
 const links = [
-  {title: 'Experience', href: '/experience'},
+  {title: 'Skills', href: '/skills'},
   {title: 'Projects', href: '/projects'},
-  {title: 'CV'}
+]
+
+const cvVariants = [
+  {title: 'CV in English', lang: 'EN'},
+  {title: 'Резюме на русском', lang: 'RU'},
 ]
 
 const social = [
