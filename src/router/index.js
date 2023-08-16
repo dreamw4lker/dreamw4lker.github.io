@@ -28,23 +28,12 @@ const routes = [
     ]
   },
   {
-    path: '/bio',
-    component: () => import('@/layouts/MainAppBarLayout.vue'),
-    children: [
-      {
-        path: '',
-        name: 'Bio',
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Bio.vue'),
-      }
-    ]
-  },
-  {
     path: '/projects',
     component: () => import('@/layouts/MainAppBarLayout.vue'),
     children: [
       {
         path: '',
-        name: 'Bio',
+        name: 'Projects',
         component: () => import(/* webpackChunkName: "home" */ '@/views/Projects.vue'),
       }
     ]
