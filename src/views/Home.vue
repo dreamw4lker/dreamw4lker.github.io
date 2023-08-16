@@ -633,8 +633,8 @@ const setupScript = {
 }
 
 const links = [
-  {title: 'Skills', href: '/skills'},
-  {title: 'Projects', href: '/projects'},
+  {title: 'Skills', href: '/#/skills'},
+  {title: 'Projects', href: '/#/projects'},
 ]
 
 const cvVariants = [
