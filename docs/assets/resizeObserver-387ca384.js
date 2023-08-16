@@ -1,0 +1,1 @@
+import{f,L as u,j as R,z as v,U as i,Z as c}from"./index-4549b0e0.js";function z(t){const o=f(),s=f();if(u){const n=new ResizeObserver(e=>{t==null||t(e,n),e.length&&(s.value=e[0].contentRect)});R(()=>{n.disconnect()}),v(o,(e,r)=>{r&&(n.unobserve(i(r)),s.value=void 0),e&&n.observe(i(e))},{flush:"post"})}return{resizeRef:o,contentRect:c(s)}}export{z as u};
