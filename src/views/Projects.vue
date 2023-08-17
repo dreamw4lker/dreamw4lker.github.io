@@ -37,8 +37,8 @@ const projects = [
     technologies: ['Java 11', 'Maven', 'Thymeleaf']
   },
   {
-    name: 'i18n-xls-converter',
-    link: 'TODO',
+    name: 'i18n-to-xls',
+    link: 'https://github.com/dreamw4lker/i18n-to-xls',
     description: 'Convert JSON i18n strings to XLS-file and vice versa.\nCan be used with vue-i18n or similar libraries.',
     technologies: ['Java 11', 'Maven', 'GSON', 'Apache POI'],
   }
