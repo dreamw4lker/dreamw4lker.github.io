@@ -7,7 +7,7 @@
       :options="setupScript"
     />
     <div class="d-flex flex-column position-relative fill-height align-center justify-center" style="z-index: 2">
-      <v-avatar image="/assets/img/photo_h.png" size="120" class="x-avatar"/>
+      <v-avatar image="/assets/img/photo_h.jpg" size="120" class="x-avatar"/>
       <p style="color: #FFF; font-size: 48px; font-weight: 600; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Alexander Shkirkov</p>
       <p style="color: #FFF; font-size: 36px; font-weight: 200; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Fullstack Java / Vue.js developer</p>
       <div class="d-flex pt-10">
@@ -653,7 +653,7 @@ const social = [
 
 <style>
 .x-avatar .v-img__img {
-  transform: scale(2.5);
-  margin-top: 60px;
+  transform: scale(1.5);
+  margin-top: 20px;
 }
 </style>

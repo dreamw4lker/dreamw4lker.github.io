@@ -90,8 +90,8 @@ const skills = [
     background: `${getAssetsPrefix()}/assets/img/frontend.png`,
     techs: [
       {name: 'JavaScript', rating: 5, info: 'Around 5 years of experience. The main language used in frontend tasks'},
-      {name: 'Vue 2', rating: 5, info: '~3.5 years of experience. The main framework for modern projects, generally used with Vuetify UI components. Unfortunately, I have no experience with Vue 3 yet'},
-      {name: 'Vuetify', rating: 5, info: '~3.5 years of experience. Used as main UI library in most of the modern projects. Successfully migrated from Vuetify 1.X to Vuetify 2.X. One of the top answerers in `vuetify.js` tag at StackOverflow'},
+      {name: 'Vue 2/3', rating: 5, info: '~4 years of experience. The main framework for modern projects, generally used with Vuetify UI components'},
+      {name: 'Vuetify', rating: 5, info: '~4 years of experience. Used as main UI library in most of the modern projects. Successfully migrated from Vuetify 1.X to Vuetify 2.X and from Vuetify 2.X to Vuetify 3.X. One of the top answerers in `vuetify.js` tag at StackOverflow'},
       {name: 'jQuery', rating: 3.5, info: '~2 years of experience. Used in pre-Vue projects in combination with Wicket or Thymeleaf frameworks'},
     ]
   },
@@ -99,7 +99,7 @@ const skills = [
     type: 'Backend: Java environment',
     background: `${getAssetsPrefix()}/assets/img/backend.png`,
     techs: [
-      {name: 'Java 8/11', rating: 5, info: 'Around 6 years of experience. The main language used in backend tasks. Also have some experience in Java 6, 7 and 17'},
+      {name: 'Java 8/11/17/21', rating: 5, info: 'Around 7 years of experience. The main language used in backend tasks. Also have some experience in Java 6 and 7'},
       {name: 'Spring', rating: 4.5, info: '~6 years of experience. Application framework for the most projects'},
       {name: 'Hibernate', rating: 4, info: '~6 years of experience. The main ORM for the most projects'},
       {name: 'jOOQ', rating: 3, info: '~2 years of production experience. Used in one project as an alternative of Hibernate'},
@@ -155,8 +155,6 @@ const skills = [
 const inProgress = {
   background: `${getAssetsPrefix()}/assets/img/in_progress.png`,
   techs: [
-    {name: 'Vue3 + Vuetify3'},
-    {name: 'Java 17'},
     {name: 'TypeScript'},
   ]
 }

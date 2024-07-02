@@ -48,6 +48,25 @@ const projectsOpenSource = [
 
 const projectsCommercial = [
   {
+    name: 'Ave-Medico',
+    links: [
+      {
+        type: 'PlayMarket',
+        href: 'https://play.google.com/store/apps/details?id=ru.lynxsoft.avemedico.mobile',
+      },
+      {
+        type: 'AppStore',
+        href: 'https://apps.apple.com/us/app/id6477989585'
+      },
+      {
+        type: 'RuStore',
+        href: 'https://www.rustore.ru/catalog/app/ru.lynxsoft.avemedico.mobile'
+      }
+    ],
+    description: 'A mobile application that allows to make an appointment to a doctor and see the history of your previous visits.',
+    technologies: ['Apache Cordova', 'Vue 2', 'Vuetify.js']
+  },
+  {
     name: 'Ovum Lab',
     links: [
       {
@@ -57,9 +76,13 @@ const projectsCommercial = [
       {
         type: 'AppStore',
         href: 'https://apps.apple.com/app/laboratoriya-ovum/id1504379583'
+      },
+      {
+        type: 'RuStore',
+        href: 'https://www.rustore.ru/catalog/app/ru.lynxsoft.ovum.mobile'
       }
     ],
-    description: 'A mobile application that allows to make an appointment to a doctor and see the history of your previous visits',
+    description: 'A mobile application that allows to see the history of your visits to the laboratory, download and view the results of your tests over time.',
     technologies: ['Apache Cordova', 'Vue 2', 'Vuetify.js']
   },
   {
@@ -74,7 +97,7 @@ const projectsCommercial = [
         href: 'https://apps.apple.com/ru/app/%D0%BC%D0%BF-janti/id1495735394'
       }
     ],
-    description: 'A mobile application that allows to monitor road transport, build a passed routes and some technical reports',
+    description: 'A mobile application that allows to monitor road transport, build a passed routes and some technical reports.',
     technologies: ['Apache Cordova', 'Vue 2', 'JavaScript', 'OpenLayers']
   },
 ]
