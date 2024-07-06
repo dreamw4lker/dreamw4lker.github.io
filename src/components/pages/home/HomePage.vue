@@ -8,8 +8,12 @@
     />
     <div class="d-flex flex-column position-relative fill-height align-center justify-center" style="z-index: 2">
       <v-avatar image="/assets/img/photo_h.jpg" size="120" class="x-avatar"/>
-      <p style="color: #FFF; font-size: 48px; font-weight: 600; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Alexander Shkirkov</p>
-      <p style="color: #FFF; font-size: 36px; font-weight: 200; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif" class="mt-8">Fullstack Java / Vue.js developer</p>
+      <p
+        style="color: #FFF; font-size: 48px; font-weight: 600; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif"
+        class="mt-8">Alexander Shkirkov</p>
+      <p
+        style="color: #FFF; font-size: 36px; font-weight: 200; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif"
+        class="mt-8">Fullstack Java / Vue.js developer</p>
       <div class="d-flex pt-10">
         <template v-for="link in links">
           <v-btn
@@ -74,7 +78,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import {loadFull} from "tsparticles"
 
 const particlesInit = async engine => {
@@ -633,8 +637,8 @@ const setupScript = {
 }
 
 const links = [
-  {title: 'Skills', href: '/#/skills'},
-  {title: 'Projects', href: '/#/projects'},
+  {title: 'Skills', href: '/skills'},
+  {title: 'Projects', href: '/projects'},
 ]
 
 const cvVariants = [
@@ -649,6 +653,18 @@ const social = [
   {icon: 'mdi-stack-overflow', href: 'https://stackoverflow.com/users/9275224', tooltip: 'StackOverflow profile'},
   {icon: 'systemIcons:leetcode', href: 'https://leetcode.com/dreamwalker7', tooltip: 'LeetCode profile'},
 ]
+
+export default {
+  data() {
+    return {
+      particlesInit,
+      setupScript,
+      links,
+      cvVariants,
+      social,
+    }
+  }
+}
 </script>
 
 <style>

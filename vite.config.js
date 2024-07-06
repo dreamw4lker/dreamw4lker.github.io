@@ -1,29 +1,45 @@
-// Plugins
-import vue from '@vitejs/plugin-vue'
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+// noinspection ES6PreferShortImport
 
-// Utilities
-import { defineConfig } from 'vite'
-import { fileURLToPath, URL } from 'node:url'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import Vue from '@vitejs/plugin-vue'
+import VueRouter from 'unplugin-vue-router/vite'
+import Vuetify, {transformAssetUrls} from 'vite-plugin-vuetify'
+import {defineConfig} from 'vite'
+import {fileURLToPath, URL} from 'node:url'
+import {esbuildTarget} from "./src/plugins/esbuild/esbuild.target.js"
+import {publicPath} from "./src/plugins/consts.js"
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue({
-      template: { transformAssetUrls }
+    VueRouter(),
+    Vue({
+      template: {transformAssetUrls}
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
-    vuetify({
+    Vuetify({
       autoImport: true,
       styles: {
-        configFile: 'src/styles/settings.scss',
+        configFile: './styles/settings.scss',
       },
     }),
+    Components(),
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+      ],
+      eslintrc: {
+        enabled: true,
+      },
+      vueTemplate: true,
+    }),
   ],
-  define: { 'process.env': {} },
+  define: {
+    'process.env': {}
+  },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
     extensions: [
       '.js',
@@ -36,9 +52,11 @@ export default defineConfig({
     ],
   },
   server: {
-    port: 3000,
+    port: 8080,
   },
   build: {
-    outDir: 'docs'
-  }
+    outDir: 'dist',
+    target: esbuildTarget
+  },
+  base: publicPath
 })

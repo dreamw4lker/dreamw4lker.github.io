@@ -1,7 +1,19 @@
 <template>
-  <router-view />
+  <v-app>
+    <v-main>
+      <router-view :key="timestampKey"/>
+    </v-main>
+  </v-app>
 </template>
 
-<script setup>
-import './styles/main.scss'
+<script>
+import '@/../styles/systemStyles.scss'
+
+export default {
+  data() {
+    return {
+      timestampKey: Date.now()
+    }
+  }
+}
 </script>
