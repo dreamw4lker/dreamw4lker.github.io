@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Simple workflow for building Node.js Vue3 app and deploying static content to GitHub Pages
+name: Build & Deploy
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,6 +31,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js 20.X
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Node.js clean+install
+        run: npm ci
+      - name: Node.js build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
