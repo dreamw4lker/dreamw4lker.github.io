@@ -60,7 +60,7 @@ const projectsCommercial = [
       },
       {
         type: 'RuStore',
-        href: 'https://www.rustore.ru/catalog/app/ru.lynxsoft.avemedico.mobile'
+        href: 'https://rustore.ru/catalog/app/ru.lynxsoft.avemedico.mobile'
       }
     ],
     description: 'A mobile application that allows to make an appointment to a doctor and see the history of your previous visits.',
@@ -79,7 +79,7 @@ const projectsCommercial = [
       },
       {
         type: 'RuStore',
-        href: 'https://www.rustore.ru/catalog/app/ru.lynxsoft.ovum.mobile'
+        href: 'https://rustore.ru/catalog/app/ru.lynxsoft.ovum.mobile'
       }
     ],
     description: 'A mobile application that allows to see the history of your visits to the laboratory, download and view the results of your tests over time.',
@@ -89,12 +89,12 @@ const projectsCommercial = [
     name: 'Janti',
     links: [
       {
-        type: 'PlayMarket',
-        href: 'https://play.google.com/store/apps/details?id=ru.janti.mobile',
-      },
-      {
         type: 'AppStore',
         href: 'https://apps.apple.com/ru/app/%D0%BC%D0%BF-janti/id1495735394'
+      },
+      {
+        type: 'RuStore',
+        href: 'https://rustore.ru/catalog/app/ru.janti.mobile'
       }
     ],
     description: 'A mobile application that allows to monitor road transport, build a passed routes and some technical reports.',
