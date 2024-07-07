@@ -21,6 +21,7 @@
             color="white"
             class="ml-2"
             :href="link.href"
+            @click.prevent="$router.push({path: link.href})"
           >
             {{ link.title }}
           </v-btn>

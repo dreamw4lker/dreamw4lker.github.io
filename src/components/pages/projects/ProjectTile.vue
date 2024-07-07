@@ -10,7 +10,7 @@
         <p class="text-pre-wrap mb-6" style="font-size: 16px">{{ project.description }}</p>
         <template v-for="link in project.links">
           <p class="font-weight-bold mb-2">{{ `${link.type}: ` }}<a :href="link.href"
-                                                           style="color: #66bb6a">{{ link.href }}</a></p>
+                                                                    style="color: #66bb6a">{{ link.href }}</a></p>
         </template>
 
         <p class="font-weight-bold">Main libraries / technologies:</p>
@@ -24,10 +24,12 @@
   </v-col>
 </template>
 
-<script setup>
-defineProps({
-  project: Object,
-})
+<script>
+export default {
+  props: {
+    project: Object
+  }
+}
 </script>
 
 <style scoped>

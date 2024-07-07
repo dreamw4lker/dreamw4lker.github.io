@@ -11,7 +11,7 @@
               class="align-end text-white"
               :class="skill.backgroundClass"
               height="200"
-              :src="skill.background"
+              :src="getImageUrl(skill.background)"
               cover
             >
               <v-card-title class="bg-primary-transparent">
@@ -64,7 +64,7 @@
             class="align-end text-white"
             :class="inProgress.backgroundClass"
             height="200"
-            :src="inProgress.background"
+            :src="getImageUrl(inProgress.background)"
             cover
           />
 
@@ -80,19 +80,10 @@
 </template>
 
 <script>
-export default {}
-</script>
-
-<script setup>
-
-function getAssetsPrefix() {
-  return import.meta.env.PROD ? '' : '/public'
-}
-
 const skills = [
   {
     type: 'Frontend: JS environment',
-    background: `${getAssetsPrefix()}/assets/img/frontend.png`,
+    background: `img/frontend.png`,
     techs: [
       {name: 'JavaScript', rating: 5, info: 'Around 5 years of experience. The main language used in frontend tasks'},
       {
@@ -114,7 +105,7 @@ const skills = [
   },
   {
     type: 'Backend: Java environment',
-    background: `${getAssetsPrefix()}/assets/img/backend.png`,
+    background: `img/backend.png`,
     techs: [
       {
         name: 'Java 8/11/17/21',
@@ -147,7 +138,7 @@ const skills = [
   },
   {
     type: 'Databases',
-    background: `${getAssetsPrefix()}/assets/img/databases.png`,
+    background: `img/databases.png`,
     backgroundClass: 'object-position-top',
     techs: [
       {
@@ -171,7 +162,7 @@ const skills = [
   },
   {
     type: 'VCS',
-    background: `${getAssetsPrefix()}/assets/img/vcs.png`,
+    background: `img/vcs.png`,
     backgroundClass: 'object-position-top',
     techs: [
       {name: 'Git', rating: 5, info: 'More than 4 years of production experience in modern projects'},
@@ -180,7 +171,7 @@ const skills = [
   },
   {
     type: 'CI',
-    background: `${getAssetsPrefix()}/assets/img/ci.png`,
+    background: `img/ci.png`,
     backgroundClass: 'object-position-top',
     techs: [
       {name: 'Jenkins', rating: 4, info: '~6 years of experience, mainly with small configuration changes of CI tasks'},
@@ -189,7 +180,7 @@ const skills = [
   },
   {
     type: '...etc',
-    background: `${getAssetsPrefix()}/assets/img/etc_skills.png`,
+    background: `img/etc_skills.png`,
     backgroundClass: 'object-position-bottom',
     techs: [
       {
@@ -218,10 +209,27 @@ const skills = [
 ]
 
 const inProgress = {
-  background: `${getAssetsPrefix()}/assets/img/in_progress.png`,
+  background: `img/in_progress.png`,
   techs: [
     {name: 'TypeScript'},
   ]
+}
+
+//TODO: move to helpers
+function getImageUrl(path) {
+  return new URL(`/assets/${path}`, import.meta.url).href
+}
+
+export default {
+  data() {
+    return {
+      skills,
+      inProgress,
+    }
+  },
+  methods: {
+    getImageUrl,
+  }
 }
 </script>
 

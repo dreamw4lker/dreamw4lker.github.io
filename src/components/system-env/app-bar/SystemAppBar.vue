@@ -7,6 +7,7 @@
     <v-app-bar-nav-icon
       icon="mdi-home"
       href="/"
+      @click.prevent="$router.push({path: '/'})"
     />
     <v-app-bar-title class="text-right">
       <template v-for="link in links">
@@ -14,6 +15,7 @@
           variant="outlined"
           :href="link.href"
           class="mr-2"
+          @click.prevent="$router.push({path: link.href})"
         >
           {{ link.title }}
         </v-btn>
@@ -22,11 +24,19 @@
   </v-app-bar>
 </template>
 
-<script setup>
+<script>
 const links = [
   {title: 'Skills', href: '/skills'},
   {title: 'Projects', href: '/projects'},
 ]
+
+export default {
+  data() {
+    return {
+      links,
+    }
+  }
+}
 </script>
 
 <style scoped>

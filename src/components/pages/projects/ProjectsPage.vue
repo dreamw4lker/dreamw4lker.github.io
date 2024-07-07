@@ -19,11 +19,7 @@
 </template>
 
 <script>
-export default {}
-</script>
-
-<script setup>
-import ProjectTile from "./ProjectTile"
+import ProjectTile from "@/components/pages/projects/ProjectTile.vue"
 
 const projectsOpenSource = [
   {
@@ -105,6 +101,18 @@ const projectsCommercial = [
     technologies: ['Apache Cordova', 'Vue 2', 'JavaScript', 'OpenLayers']
   },
 ]
+
+export default {
+  components: {
+    ProjectTile
+  },
+  data() {
+    return {
+      projectsOpenSource,
+      projectsCommercial
+    }
+  }
+}
 </script>
 
 <style scoped>
