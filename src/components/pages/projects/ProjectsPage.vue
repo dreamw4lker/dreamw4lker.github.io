@@ -19,13 +19,11 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <script setup>
-import ProjectTile from "@/components/ProjectTile"
+import ProjectTile from "./ProjectTile"
 
 const projectsOpenSource = [
   {

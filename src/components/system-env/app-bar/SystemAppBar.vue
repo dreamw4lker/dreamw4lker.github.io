@@ -1,8 +1,12 @@
 <template>
-  <v-app-bar flat color="primary" class="x-app-bar">
+  <v-app-bar
+    flat
+    color="primary"
+    class="x-app-bar"
+  >
     <v-app-bar-nav-icon
       icon="mdi-home"
-      href="/#/"
+      href="/"
     />
     <v-app-bar-title class="text-right">
       <template v-for="link in links">
@@ -20,8 +24,8 @@
 
 <script setup>
 const links = [
-  {title: 'Skills', href: '/#/skills'},
-  {title: 'Projects', href: '/#/projects'},
+  {title: 'Skills', href: '/skills'},
+  {title: 'Projects', href: '/projects'},
 ]
 </script>
 

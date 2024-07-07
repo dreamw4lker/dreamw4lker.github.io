@@ -80,12 +80,11 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <script setup>
+
 function getAssetsPrefix() {
   return import.meta.env.PROD ? '' : '/public'
 }
@@ -96,22 +95,54 @@ const skills = [
     background: `${getAssetsPrefix()}/assets/img/frontend.png`,
     techs: [
       {name: 'JavaScript', rating: 5, info: 'Around 5 years of experience. The main language used in frontend tasks'},
-      {name: 'Vue 2/3', rating: 5, info: '~4 years of experience. The main framework for modern projects, generally used with Vuetify UI components'},
-      {name: 'Vuetify', rating: 5, info: '~4 years of experience. Used as main UI library in most of the modern projects. Successfully migrated from Vuetify 1.X to Vuetify 2.X and from Vuetify 2.X to Vuetify 3.X. One of the top answerers in `vuetify.js` tag at StackOverflow'},
-      {name: 'jQuery', rating: 3.5, info: '~2 years of experience. Used in pre-Vue projects in combination with Wicket or Thymeleaf frameworks'},
+      {
+        name: 'Vue 2/3',
+        rating: 5,
+        info: '~4 years of experience. The main framework for modern projects, generally used with Vuetify UI components'
+      },
+      {
+        name: 'Vuetify',
+        rating: 5,
+        info: '~4 years of experience. Used as main UI library in most of the modern projects. Successfully migrated from Vuetify 1.X to Vuetify 2.X and from Vuetify 2.X to Vuetify 3.X. One of the top answerers in `vuetify.js` tag at StackOverflow'
+      },
+      {
+        name: 'jQuery',
+        rating: 3.5,
+        info: '~2 years of experience. Used in pre-Vue projects in combination with Wicket or Thymeleaf frameworks'
+      },
     ]
   },
   {
     type: 'Backend: Java environment',
     background: `${getAssetsPrefix()}/assets/img/backend.png`,
     techs: [
-      {name: 'Java 8/11/17/21', rating: 5, info: 'Around 7 years of experience. The main language used in backend tasks. Also have some experience in Java 6 and 7'},
+      {
+        name: 'Java 8/11/17/21',
+        rating: 5,
+        info: 'Around 7 years of experience. The main language used in backend tasks. Also have some experience in Java 6 and 7'
+      },
       {name: 'Spring', rating: 4.5, info: '~6 years of experience. Application framework for the most projects'},
       {name: 'Hibernate', rating: 4, info: '~6 years of experience. The main ORM for the most projects'},
-      {name: 'jOOQ', rating: 3, info: '~2 years of production experience. Used in one project as an alternative of Hibernate'},
-      {name: 'JasperReports', rating: 4, info: '~5 years of production experience. Used in every project that needs template generation (reports, printing forms, ...)'},
-      {name: 'Apache Wicket', rating: 3, info: '~4 years of periodically experience in legacy, but still supported projects. Superseded by Vue environment in modern projects'},
-      {name: 'Thymeleaf', rating: 2, info: '~2 years of experience. Used in some pre-Vue projects as an alternative of Wicket'},
+      {
+        name: 'jOOQ',
+        rating: 3,
+        info: '~2 years of production experience. Used in one project as an alternative of Hibernate'
+      },
+      {
+        name: 'JasperReports',
+        rating: 4,
+        info: '~5 years of production experience. Used in every project that needs template generation (reports, printing forms, ...)'
+      },
+      {
+        name: 'Apache Wicket',
+        rating: 3,
+        info: '~4 years of periodically experience in legacy, but still supported projects. Superseded by Vue environment in modern projects'
+      },
+      {
+        name: 'Thymeleaf',
+        rating: 2,
+        info: '~2 years of experience. Used in some pre-Vue projects as an alternative of Wicket'
+      },
     ]
   },
   {
@@ -119,10 +150,22 @@ const skills = [
     background: `${getAssetsPrefix()}/assets/img/databases.png`,
     backgroundClass: 'object-position-top',
     techs: [
-      {name: 'PostgreSQL', rating: 5, info: 'More than 5 years of production experience. The main DBMS used in projects. Writing basic queries, working with views, functions, etc'},
-      {name: 'Oracle', rating: 4, info: '~3 years of experience, mainly during the process of Oracle -> Postgres migration in some projects'},
+      {
+        name: 'PostgreSQL',
+        rating: 5,
+        info: 'More than 5 years of production experience. The main DBMS used in projects. Writing basic queries, working with views, functions, etc'
+      },
+      {
+        name: 'Oracle',
+        rating: 4,
+        info: '~3 years of experience, mainly during the process of Oracle -> Postgres migration in some projects'
+      },
       {name: 'Apache Derby', rating: 4, info: '~3 years of experience. Used in internal and low-load projects'},
-      {name: 'H2', rating: 3, info: '~1.5 years of production experience. Used in the only one project, superseded by Apache Derby because of insufficient performance'},
+      {
+        name: 'H2',
+        rating: 3,
+        info: '~1.5 years of production experience. Used in the only one project, superseded by Apache Derby because of insufficient performance'
+      },
       {name: 'MongoDB', rating: 2, info: 'Basically writing small queries to grab data from external systems'},
     ]
   },
@@ -149,11 +192,27 @@ const skills = [
     background: `${getAssetsPrefix()}/assets/img/etc_skills.png`,
     backgroundClass: 'object-position-bottom',
     techs: [
-      {name: 'Apache Cordova', rating: 4, info: '~3 years of experience in Android and iOS mobile development, starting from cordova-android 8.1.0. Used for packing Vue projects into mobile apps. Two successfully published projects in PlayMarket and AppStore'},
-      {name: 'Modbus RTU/TCP', rating: 4, info: '~3 years of periodically experience, used for communication with some remote controllers (i.e. diesel-generator controllers, electricity meters, discrete I/O controllers, etc)'},
-      {name: 'Printer languages: TSPL, EPL, ZPL', rating: 4, info: '~3 years of periodically experience to communicate with barcode label printers (TSC, Eltron, Zebra and compatible printers). Making barcode label templates to use with some medical and laboratory systems'},
+      {
+        name: 'Apache Cordova',
+        rating: 4,
+        info: '~3 years of experience in Android and iOS mobile development, starting from cordova-android 8.1.0. Used for packing Vue projects into mobile apps. Two successfully published projects in PlayMarket and AppStore'
+      },
+      {
+        name: 'Modbus RTU/TCP',
+        rating: 4,
+        info: '~3 years of periodically experience, used for communication with some remote controllers (i.e. diesel-generator controllers, electricity meters, discrete I/O controllers, etc)'
+      },
+      {
+        name: 'Printer languages: TSPL, EPL, ZPL',
+        rating: 4,
+        info: '~3 years of periodically experience to communicate with barcode label printers (TSC, Eltron, Zebra and compatible printers). Making barcode label templates to use with some medical and laboratory systems'
+      },
       {name: 'JavaFX', rating: 3, info: '~2 years of experience in the only one project written on Java 8'},
-      {name: 'Swing', rating: 2, info: 'Some experience in supporting legacy system written on Java 6/7 with Swing GUI'},
+      {
+        name: 'Swing',
+        rating: 2,
+        info: 'Some experience in supporting legacy system written on Java 6/7 with Swing GUI'
+      },
     ]
   },
 ]
