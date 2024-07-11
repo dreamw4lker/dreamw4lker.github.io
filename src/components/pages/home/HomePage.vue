@@ -1,4 +1,5 @@
 <template>
+  <system-page-title title="Home" />
   <div class="fill-height text-center"
        style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e)">
     <Particles
@@ -81,6 +82,7 @@
 
 <script>
 import {loadFull} from "tsparticles"
+import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
 
 const particlesInit = async engine => {
   await loadFull(engine)
@@ -656,6 +658,9 @@ const social = [
 ]
 
 export default {
+  components: {
+    SystemPageTitle
+  },
   data() {
     return {
       particlesInit,

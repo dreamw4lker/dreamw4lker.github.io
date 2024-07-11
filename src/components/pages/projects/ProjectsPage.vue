@@ -1,4 +1,5 @@
 <template>
+  <system-page-title title="Projects" />
   <div class="d-flex flex-column mx-auto" style="max-width: 1200px">
     <p class="text-white text-h3 text-center mt-4">Projects</p>
     <p class="text-grey-lighten-2 text-h6 text-center mt-4">Open source</p>
@@ -20,6 +21,7 @@
 
 <script>
 import ProjectTile from "@/components/pages/projects/ProjectTile.vue"
+import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
 
 const projectsOpenSource = [
   {
@@ -104,6 +106,7 @@ const projectsCommercial = [
 
 export default {
   components: {
+    SystemPageTitle,
     ProjectTile
   },
   data() {

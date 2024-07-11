@@ -1,4 +1,5 @@
 <template>
+  <system-page-title title="Skills" />
   <div class="d-flex flex-column mx-auto" style="max-width: 1200px">
     <p class="text-white text-h3 text-center mt-4">Skills and experience</p>
     <v-row class="pt-4">
@@ -80,6 +81,8 @@
 </template>
 
 <script>
+import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
+
 const skills = [
   {
     type: 'Frontend: JS environment',
@@ -221,6 +224,9 @@ function getImageUrl(path) {
 }
 
 export default {
+  components: {
+    SystemPageTitle
+  },
   data() {
     return {
       skills,
