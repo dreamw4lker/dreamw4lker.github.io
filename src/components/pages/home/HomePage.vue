@@ -2,9 +2,8 @@
   <system-page-title title="Home" />
   <div class="fill-height text-center"
        style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e)">
-    <Particles
+    <vue-particles
       id="tsparticles"
-      :particles-init="particlesInit"
       :options="setupScript"
     />
     <div class="d-flex flex-column position-relative fill-height align-center justify-center" style="z-index: 2">
@@ -81,12 +80,7 @@
 </template>
 
 <script>
-import {loadFull} from "tsparticles"
 import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
-
-const particlesInit = async engine => {
-  await loadFull(engine)
-}
 
 //Particles setup script
 const setupScript = {
@@ -663,7 +657,6 @@ export default {
   },
   data() {
     return {
-      particlesInit,
       setupScript,
       links,
       cvVariants,

@@ -1,7 +1,8 @@
 import {loadFonts} from './webfontloader'
-import Particles from "vue3-particles"
 import {getRouter} from "./router/index.js"
 import vuetify from "./vuetify/vuetify.js"
+import Particles from "@tsparticles/vue3"
+import {loadSlim} from "@tsparticles/slim"
 
 export function registerPlugins(app) {
   let router = getRouter(app)
@@ -9,5 +10,9 @@ export function registerPlugins(app) {
   app
     .use(vuetify)
     .use(router)
-    .use(Particles)
+    .use(Particles, {
+      init: async engine => {
+        await loadSlim(engine)
+      }
+    })
 }

@@ -9,14 +9,13 @@
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@tsparticles/vue3": "3.0.1",
+    "@tsparticles/slim": "3.5.0",
     "@mdi/font": "7.4.47",
     "core-js": "3.37.1",
     "roboto-fontface": "*",
-    "tsparticles": "^2.10.1",
-    "tsparticles-engine": "^2.10.1",
     "vue": "3.4.31",
     "vue-router": "4.4.0",
-    "vue3-particles": "^2.10.1",
     "vuetify": "3.6.11",
     "webfontloader": "^1.0.0"
   },
