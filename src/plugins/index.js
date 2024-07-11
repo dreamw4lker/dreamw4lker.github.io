@@ -1,4 +1,3 @@
-import {loadFonts} from './webfontloader'
 import {getRouter} from "./router/index.js"
 import vuetify from "./vuetify/vuetify.js"
 import Particles from "@tsparticles/vue3"
@@ -6,7 +5,6 @@ import {loadSlim} from "@tsparticles/slim"
 
 export function registerPlugins(app) {
   let router = getRouter(app)
-  loadFonts()
   app
     .use(vuetify)
     .use(router)

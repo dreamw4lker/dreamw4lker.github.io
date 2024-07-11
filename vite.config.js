@@ -9,9 +9,14 @@ import {defineConfig} from 'vite'
 import {fileURLToPath, URL} from 'node:url'
 import {esbuildTarget} from "./src/plugins/esbuild/esbuild.target.js"
 import {publicPath} from "./src/plugins/consts.js"
+import {webfontDownload} from "vite-plugin-webfont-dl"
 
 export default defineConfig({
   plugins: [
+    webfontDownload([
+      'https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900&display=swap',
+      'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,600&display=swap'
+    ]),
     VueRouter(),
     Vue({
       template: {transformAssetUrls}
