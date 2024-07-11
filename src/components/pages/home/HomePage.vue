@@ -45,7 +45,7 @@
               v-for="item in cvVariants"
               :key="item.lang"
               :value="item.lang"
-              :href="`/cv/ShkirkovAU_CV_${item.lang}.pdf`"
+              :href="getAssetUrl(`cv/ShkirkovAU_CV_${item.lang}.pdf`)"
               target="_blank"
             >
               <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -81,6 +81,7 @@
 
 <script>
 import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
+import {getAssetUrl} from "@/plugins/assets-helpers.js"
 
 //Particles setup script
 const setupScript = {
@@ -662,6 +663,9 @@ export default {
       cvVariants,
       social,
     }
+  },
+  methods: {
+    getAssetUrl
   }
 }
 </script>

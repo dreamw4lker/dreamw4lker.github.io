@@ -12,7 +12,7 @@
               class="align-end text-white"
               :class="skill.backgroundClass"
               height="200"
-              :src="getImageUrl(skill.background)"
+              :src="getAssetUrl(skill.background)"
               cover
             >
               <v-card-title class="bg-primary-transparent">
@@ -65,7 +65,7 @@
             class="align-end text-white"
             :class="inProgress.backgroundClass"
             height="200"
-            :src="getImageUrl(inProgress.background)"
+            :src="getAssetUrl(inProgress.background)"
             cover
           />
 
@@ -82,6 +82,7 @@
 
 <script>
 import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
+import {getAssetUrl} from "@/plugins/assets-helpers.js"
 
 const skills = [
   {
@@ -218,11 +219,6 @@ const inProgress = {
   ]
 }
 
-//TODO: move to helpers
-function getImageUrl(path) {
-  return new URL(`/assets/${path}`, import.meta.url).href
-}
-
 export default {
   components: {
     SystemPageTitle
@@ -234,7 +230,7 @@ export default {
     }
   },
   methods: {
-    getImageUrl,
+    getAssetUrl,
   }
 }
 </script>
