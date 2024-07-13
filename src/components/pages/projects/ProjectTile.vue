@@ -3,16 +3,44 @@
     <v-card
       class="mx-auto x-card"
     >
-      <v-card-title class="bg-primary-transparent text-white" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
-        {{ project.name }}
+      <v-card-title
+        class="bg-primary-transparent text-white"
+        style="border-bottom: 1px solid rgba(255, 255, 255, 0.2)"
+      >
+        <div class="d-flex flex-row">
+          <v-avatar
+            class="mt-2 mr-4"
+            style="border-radius: 10px"
+            size="56"
+            :start="true"
+            :image="getAssetUrl(project.icon)"
+          />
+          <div class="d-flex flex-column">
+            <p class="font-weight-bold" style="font-size: 20px">{{ project.name }}</p>
+            <p class="text-pre-wrap" style="font-size: 14px">{{ project.description }}</p>
+          </div>
+        </div>
       </v-card-title>
       <v-card-text class="text-white pa-4">
-        <p class="text-pre-wrap mb-6" style="font-size: 16px">{{ project.description }}</p>
-        <template v-for="link in project.links">
-          <p class="font-weight-bold mb-2">{{ `${link.type}: ` }}<a :href="link.href"
-                                                                    style="color: #66bb6a">{{ link.href }}</a></p>
-        </template>
-
+        <v-table
+          style="background: transparent"
+          class="pb-4"
+        >
+          <tbody>
+          <tr
+            v-for="link in project.links"
+            class="font-weight-bold"
+          >
+            <td class="text-white pl-0">{{ link.type }}</td>
+            <td style="max-width: 300px">
+              <a
+                :href="link.href"
+                style="color: #66bb6a"
+              >{{ link.href }}</a>
+            </td>
+          </tr>
+          </tbody>
+        </v-table>
         <p class="font-weight-bold">Main libraries / technologies:</p>
         <ul class="ml-4">
           <template v-for="tech in project.technologies">
@@ -25,9 +53,14 @@
 </template>
 
 <script>
+import {getAssetUrl} from "@/plugins/assets-helpers.js"
+
 export default {
   props: {
     project: Object
+  },
+  methods: {
+    getAssetUrl,
   }
 }
 </script>

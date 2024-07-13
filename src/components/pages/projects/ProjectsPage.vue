@@ -25,6 +25,7 @@ import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.
 
 const projectsOpenSource = [
   {
+    icon: 'img/projects/gitea.png',
     name: 'gitea-webhook-notifier',
     links: [
       {
@@ -36,6 +37,7 @@ const projectsOpenSource = [
     technologies: ['Java 11', 'Maven', 'Thymeleaf']
   },
   {
+    icon: 'img/projects/i18n.png',
     name: 'i18n-to-xls',
     links: [
       {
@@ -50,6 +52,7 @@ const projectsOpenSource = [
 
 const projectsCommercial = [
   {
+    icon: 'img/projects/avemedico.png',
     name: 'Ave-Medico',
     links: [
       {
@@ -58,7 +61,7 @@ const projectsCommercial = [
       },
       {
         type: 'AppStore',
-        href: 'https://apps.apple.com/us/app/id6477989585'
+        href: 'https://apps.apple.com/app/id6477989585'
       },
       {
         type: 'RuStore',
@@ -69,6 +72,7 @@ const projectsCommercial = [
     technologies: ['Apache Cordova', 'Vue 2', 'Vuetify.js']
   },
   {
+    icon: 'img/projects/ovum.png',
     name: 'Ovum Lab',
     links: [
       {
@@ -88,6 +92,7 @@ const projectsCommercial = [
     technologies: ['Apache Cordova', 'Vue 2', 'Vuetify.js']
   },
   {
+    icon: 'img/projects/janti.png',
     name: 'Janti',
     links: [
       {
