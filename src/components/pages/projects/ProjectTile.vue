@@ -1,5 +1,5 @@
 <template>
-  <v-col sm="12" md="6" class="px-2 pb-4">
+  <v-col xs="12" md="6" class="px-2 pb-4">
     <v-card
       class="mx-auto x-card"
     >

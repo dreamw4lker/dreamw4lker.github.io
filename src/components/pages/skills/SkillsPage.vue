@@ -1,63 +1,23 @@
 <template>
   <system-page-title title="Skills" />
   <div class="d-flex flex-column mx-auto" style="max-width: 1200px">
-    <p class="text-white text-h3 text-center mt-4">Skills and experience</p>
-    <v-row class="pt-4">
+    <p class="text-white text-h3 text-center mt-4">Skills & experience</p>
+    <v-row
+      no-gutters
+      class="pt-4"
+    >
       <template v-for="skill in skills">
-        <v-col sm="12" md="4">
-          <v-card
-            class="mx-auto x-card"
-          >
-            <v-img
-              class="align-end text-white"
-              :class="skill.backgroundClass"
-              height="200"
-              :src="getAssetUrl(skill.background)"
-              cover
-            >
-              <v-card-title class="bg-primary-transparent">
-                {{ skill.type }}
-              </v-card-title>
-            </v-img>
-
-            <v-card-text>
-              <v-expansion-panels variant="accordion" multiple>
-                <template v-for="tech in skill.techs">
-                  <v-expansion-panel
-                    elevation="0"
-                    style="background-color: transparent !important; color: white"
-                  >
-                    <v-expansion-panel-title v-slot="{ open }" class="px-2">
-                      <span class="font-weight-bold" style="font-size: 16px; line-height: 1.5">
-                        {{ tech.name }}
-                      </span>
-                      <v-spacer/>
-                      <v-rating
-                        :model-value="tech.rating"
-                        color="yellow-darken-3"
-                        half-increments
-                        disabled
-                        density="compact"
-                        class="pr-2"
-                      />
-                    </v-expansion-panel-title>
-
-                    <v-expansion-panel-text>
-                      {{ tech.info }}
-                    </v-expansion-panel-text>
-                  </v-expansion-panel>
-                </template>
-              </v-expansion-panels>
-            </v-card-text>
-          </v-card>
-        </v-col>
+        <skill-tile :skill="skill" />
       </template>
     </v-row>
 
-    <!--<v-divider color="white" class="mt-8 mb-4"/>
-    <p class="text-white text-h3 text-center mt-4">In progress of studying</p>
-    <v-row class="pt-4 justify-center">
-      <v-col sm="12" md="4">
+<!--    <v-divider color="white" class="mt-8 mb-4"/>
+    <p class="text-white text-h3 text-center mt-4">Studying now</p>
+    <v-row
+      no-gutters
+      class="pt-4 justify-center"
+    >
+      <v-col sm="12" md="4" class="pb-4">
         <v-card
           class="mx-auto x-card"
         >
@@ -83,6 +43,7 @@
 <script>
 import SystemPageTitle from "@/components/system-env/page-title/SystemPageTitle.vue"
 import {getAssetUrl} from "@/plugins/assets-helpers.js"
+import SkillTile from "@/components/pages/skills/SkillTile.vue"
 
 const skills = [
   {
@@ -190,7 +151,7 @@ const skills = [
       {
         name: 'Apache Cordova',
         rating: 4,
-        info: '~3 years of experience in Android and iOS mobile development, starting from cordova-android 8.1.0. Used for packing Vue projects into mobile apps. Two successfully published projects in PlayMarket and AppStore'
+        info: '~3 years of experience in Android and iOS mobile development, starting from cordova-android 8.1.0. Used for packing Vue projects into mobile apps. Three successfully published projects in PlayMarket, AppStore and RuStore (see Projects page for more information)'
       },
       {
         name: 'Modbus RTU/TCP',
@@ -212,21 +173,22 @@ const skills = [
   },
 ]
 
-const inProgress = {
+/*const inProgress = {
   background: `img/in_progress.png`,
   techs: [
     {name: 'TypeScript'},
   ]
-}
+}*/
 
 export default {
   components: {
+    SkillTile,
     SystemPageTitle
   },
   data() {
     return {
       skills,
-      inProgress,
+      //inProgress,
     }
   },
   methods: {

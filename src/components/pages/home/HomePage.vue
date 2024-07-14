@@ -10,11 +10,11 @@
       <v-avatar image="/assets/img/photo_h.jpg" size="120" class="x-avatar"/>
       <p
         style="color: #FFF; font-size: 48px; font-weight: 600; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif"
-        class="mt-8">Alexander Shkirkov</p>
+        class="mt-8 mx-4">Alexander Shkirkov</p>
       <p
         style="color: #FFF; font-size: 36px; font-weight: 200; line-height: 1.1; font-family: 'IBM Plex Sans', sans-serif"
-        class="mt-8">Fullstack Java / Vue.js developer</p>
-      <div class="d-flex pt-10">
+        class="mt-8 mx-4">Fullstack Java / Vue.js developer</p>
+      <div class="d-flex pt-10 px-4">
         <template v-for="link in links">
           <v-btn
             variant="outlined"
@@ -100,6 +100,7 @@ const social = [
   {icon: 'mdi-linkedin', href: 'https://linkedin.com/in/shkirkov', tooltip: 'LinkedIn'},
   {icon: 'mdi-stack-overflow', href: 'https://stackoverflow.com/users/9275224', tooltip: 'StackOverflow profile'},
   {icon: 'systemIcons:leetcode', href: 'https://leetcode.com/dreamwalker7', tooltip: 'LeetCode profile'},
+  {icon: 'mdi-github', href: 'https://github.com/dreamw4lker', tooltip: 'GitHub profile'},
 ]
 
 export default {
