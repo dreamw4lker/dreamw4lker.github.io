@@ -1,5 +1,5 @@
 <template>
-  <v-col sm="12" md="6">
+  <v-col sm="12" md="6" class="px-2 pb-4">
     <v-card
       class="mx-auto x-card"
     >
@@ -22,25 +22,19 @@
         </div>
       </v-card-title>
       <v-card-text class="text-white pa-4">
-        <v-table
-          style="background: transparent"
-          class="pb-4"
-        >
-          <tbody>
-          <tr
+        <div class="d-flex flex-column">
+          <div
             v-for="link in project.links"
-            class="font-weight-bold"
+            class="d-flex flex-row font-weight-bold align-center pb-4"
           >
-            <td class="text-white pl-0">{{ link.type }}</td>
-            <td style="max-width: 300px">
-              <a
-                :href="link.href"
-                style="color: #66bb6a"
-              >{{ link.href }}</a>
-            </td>
-          </tr>
-          </tbody>
-        </v-table>
+            <span class="text-white pl-0" style="min-width: 100px;">{{ link.type }}</span>
+            <a
+              :href="link.href"
+              class="overflow-auto"
+              style="color: #66bb6a"
+            >{{ link.href }}</a>
+          </div>
+        </div>
         <p class="font-weight-bold">Main libraries / technologies:</p>
         <ul class="ml-4">
           <template v-for="tech in project.technologies">

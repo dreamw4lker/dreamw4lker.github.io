@@ -4,14 +4,20 @@
     <p class="text-white text-h3 text-center mt-4">Projects</p>
     <p class="text-grey-lighten-2 text-h6 text-center mt-4">Open source</p>
 
-    <v-row class="pt-4">
+    <v-row
+      no-gutters
+      class="pt-4"
+    >
       <template v-for="project in projectsOpenSource">
         <project-tile :project="project"/>
       </template>
     </v-row>
 
-    <p class="text-grey-lighten-2 text-h6 text-center mt-4">Commercial, publicly available</p>
-    <v-row class="pt-4">
+    <p class="text-grey-lighten-2 text-h6 text-center">Commercial, publicly available</p>
+    <v-row
+      no-gutters
+      class="pt-4"
+    >
       <template v-for="project in projectsCommercial">
         <project-tile :project="project"/>
       </template>
