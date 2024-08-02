@@ -8,9 +8,8 @@ import SkillsPage from "@/components/pages/skills/SkillsPage.vue"
 
 /**
  * Основная функция создания экземпляра router для Vue-приложения
- * @param app Vue-приложение
  */
-function createRouterForApp(app) {
+function createRouterForApp() {
   return createRouter({
     history: createWebHistory(publicPath),
     routes: [
