@@ -141,6 +141,7 @@ const skills = [
     techs: [
       {name: 'Jenkins', rating: 4, info: '~6 years of experience, mainly with small configuration changes of CI tasks'},
       {name: 'GitLab', rating: 3, info: 'Some experience in third-party organization'},
+      {name: 'GitHub Actions', rating: 2, info: 'Having experience in creating some Node and Maven workflows'}
     ]
   },
   {

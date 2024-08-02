@@ -39,7 +39,7 @@ const projectsOpenSource = [
         href: 'https://github.com/dreamw4lker/gitea-webhook-notifier'
       }
     ],
-    description: 'Notify about push events in any Gitea repositories.\nBased on Gitea webhook events.',
+    description: 'Notify about push events in any Gitea repositories.\nBased on Gitea webhook events',
     technologies: ['Java 11', 'Maven', 'Thymeleaf']
   },
   {
@@ -51,8 +51,20 @@ const projectsOpenSource = [
         href: 'https://github.com/dreamw4lker/i18n-to-xls',
       }
     ],
-    description: 'Convert JSON i18n strings to XLS-file and vice versa.\nCan be used with vue-i18n or similar libraries.',
+    description: 'Convert JSON i18n strings to XLS-file and vice versa.\nCan be used with vue-i18n or similar libraries',
     technologies: ['Java 11', 'Maven', 'GSON', 'Apache POI'],
+  },
+  {
+    icon: 'img/projects/simplexval.png',
+    name: 'simple-xml-validator',
+    links: [
+      {
+        type: 'Github link',
+        href: 'https://github.com/dreamw4lker/simple-xml-validator',
+      }
+    ],
+    description: 'Validate any XML over XSD schemas and Schematron rules',
+    technologies: ['Java 11', 'Maven', 'ph-schematron'],
   }
 ]
 
@@ -74,7 +86,7 @@ const projectsCommercial = [
         href: 'https://rustore.ru/catalog/app/ru.lynxsoft.avemedico.mobile'
       }
     ],
-    description: 'A mobile application that allows to make an appointment to a doctor and see the history of your previous visits.',
+    description: 'A mobile application that allows to make an appointment to a doctor and see the history of your previous visits',
     technologies: ['Apache Cordova', 'Vue 2', 'Vuetify.js']
   },
   {
@@ -94,7 +106,7 @@ const projectsCommercial = [
         href: 'https://rustore.ru/catalog/app/ru.lynxsoft.ovum.mobile'
       }
     ],
-    description: 'A mobile application that allows to see the history of your visits to the laboratory, download and view the results of your tests over time.',
+    description: 'A mobile application that allows to see the history of your visits to the laboratory, download and view the results of your tests over time',
     technologies: ['Apache Cordova', 'Vue 2', 'Vuetify.js']
   },
   {
@@ -110,7 +122,7 @@ const projectsCommercial = [
         href: 'https://rustore.ru/catalog/app/ru.janti.mobile'
       }
     ],
-    description: 'A mobile application that allows to monitor road transport, build a passed routes and some technical reports.',
+    description: 'A mobile application that allows to monitor road transport, build a passed routes and some technical reports',
     technologies: ['Apache Cordova', 'Vue 2', 'JavaScript', 'OpenLayers']
   },
 ]
