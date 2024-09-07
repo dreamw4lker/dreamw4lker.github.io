@@ -164,6 +164,11 @@ const skills = [
         rating: 4,
         info: '~3 years of periodically experience to communicate with barcode label printers (TSC, Eltron, Zebra and compatible printers). Making barcode label templates to use with some medical and laboratory systems'
       },
+      {
+        name: 'Python',
+        rating: 3,
+        info: '~4 years of of periodically experience, used for building internal company scripts such as monitoring logs, checking for directory availability, making periodical actions, etc.'
+      },
       {name: 'JavaFX', rating: 3, info: '~2 years of experience in the only one project written on Java 8'},
       {
         name: 'Swing',
