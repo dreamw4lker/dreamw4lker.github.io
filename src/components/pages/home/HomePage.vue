@@ -96,7 +96,7 @@ const cvVariants = [
 
 const social = [
   {icon: 'systemIcons:vk', href: 'https://vk.com/a.shkirkov', tooltip: 'VK'},
-  {icon: 'mdi-instagram', href: 'https://instagram.com/dreamwal.ker', tooltip: 'Instagram'},
+  //{icon: 'mdi-instagram', href: 'https://instagram.com/dreamwal.ker', tooltip: 'Instagram'},
   {icon: 'mdi-linkedin', href: 'https://linkedin.com/in/shkirkov', tooltip: 'LinkedIn'},
   {icon: 'mdi-stack-overflow', href: 'https://stackoverflow.com/users/9275224', tooltip: 'StackOverflow profile'},
   {icon: 'systemIcons:leetcode', href: 'https://leetcode.com/dreamwalker7', tooltip: 'LeetCode profile'},
